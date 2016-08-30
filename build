@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
-mkdir -p archlive/build
-cp -r /usr/share/archiso/configs/releng/* archlive/
-cp -r /vagrant/images/config/* archlive/
+set -eu
 
-pushd archlive
+here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+out="./archlive"
+
+mkdir -p "$out/build"
+cp -r /usr/share/archiso/configs/releng/* "$out/"
+cp -r "$here"/config/* "$out/"
+
+pushd "$out"
     ./build.sh -v
 popd
+
+echo "Generated ISO is here:"
+ls -lh "$out/out"
