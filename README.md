@@ -1,5 +1,5 @@
 # media-machine
-Here you'll find configs and a build script for a tailored minimal Arch Linux
+Here you'll find configs and a build script for a tailored, minimal Arch Linux
 distribution; it contains essential files for movie watching and music listening
 and is designed to run entirely from the ISO, with no installation.
 
