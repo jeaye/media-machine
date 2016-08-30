@@ -2,5 +2,10 @@ mpv
 i3-wm
 xorg-xrandr
 xorg-xinit
+xorg-server
+xorg-server-utils
+xf86-video-ati
+xf86-input-driver
+mesa-libgl
 openssh
 rxvt-unicode
