@@ -6,6 +6,7 @@ xorg-server
 xorg-server-utils
 xf86-video-ati
 xf86-input-driver
+xf86-input-synaptics
 mesa-libgl
 openssh
 rxvt-unicode
