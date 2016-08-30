@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Disable bell
+xset -b
+
+# Acknowledge some more X settings
+xrdb -merge ~/.Xresources
+
+# Nice background color
+hsetroot -solid "#002b36"
+
+exec i3
