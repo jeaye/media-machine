@@ -15,4 +15,4 @@ pushd "$out"
 popd
 
 echo "Generated ISO is here:"
-ls -lh "$out/out"
+find "$out/out" -type f
