@@ -10,3 +10,5 @@ xf86-input-synaptics
 mesa-libgl
 openssh
 rxvt-unicode
+dmenu
+i3status
