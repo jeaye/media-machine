@@ -14,3 +14,4 @@ openssh
 rxvt-unicode
 dmenu
 i3status
+alsa-utils
