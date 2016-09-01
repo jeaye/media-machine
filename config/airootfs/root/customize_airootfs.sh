@@ -15,7 +15,7 @@ systemctl enable sshd ; systemctl start sshd
 #aticonfig --initial
 
 ### User files
-for file in i3 i3status.conf xinitrc Xresources config;
+for file in i3 i3status.conf xinitrc Xresources config ssh;
 do
     cp -rf /etc/skel/$file ~/.$file
 done
