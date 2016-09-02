@@ -7,15 +7,20 @@ export LANG=en_US.UTF-8
 ln -s /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
 
 ### System info
-echo media-machine > /etc/hostname
+echo meter > /etc/hostname
 
 ### Services
 systemctl enable sshd ; systemctl start sshd
 
 #aticonfig --initial
 
+### Users
+username=normal
+useradd -m -g users -G wheel -s /bin/bash $username
+
 ### User files
 for file in i3 i3status.conf xinitrc Xresources config ssh;
 do
-    cp -rf /etc/skel/$file ~/.$file
+    cp -rf /etc/skel/$file /home/$username/.$file
 done
+chown -R $username:users /home/$username
