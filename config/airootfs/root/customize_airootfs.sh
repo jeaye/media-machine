@@ -14,6 +14,22 @@ systemctl enable sshd ; systemctl start sshd
 
 #aticonfig --initial
 
+cat <<EOF > /etc/profile.d/media-tools.sh
+#!/usr/bin/env bash
+
+function setup-network
+{
+  ip link set enp32s0 up
+  killall dhcpcd
+  dhcpcd
+}
+
+function youtube-audio
+{
+  youtube-dl -o - --audio-quality 0 "\$1" | mpv --no-video -
+}
+EOF
+
 ### Users
 username=root
 userhome=/root
