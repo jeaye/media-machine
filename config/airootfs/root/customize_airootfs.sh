@@ -30,6 +30,11 @@ function youtube-audio
 }
 EOF
 
+### Audio
+amixer set "Auto-Mute Mode" "Disabled"
+amixer set "Master" "100%"
+alsactl store
+
 ### Users
 username=root
 userhome=/root
