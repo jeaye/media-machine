@@ -16,3 +16,5 @@ dmenu
 i3status
 alsa-utils
 youtube-dl
+cmus
+tmux
