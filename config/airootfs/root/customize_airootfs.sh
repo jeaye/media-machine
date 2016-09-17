@@ -20,7 +20,7 @@ userhome=/root
 #useradd -m -g users -G wheel -s /bin/bash $username
 
 ### User files
-for file in i3 i3status.conf xinitrc Xresources config ssh;
+for file in i3 i3status.conf tmux.conf xinitrc Xresources config ssh;
 do
     cp -rf /etc/skel/$file $userhome/.$file
 done
