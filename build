@@ -6,6 +6,7 @@ here="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 out="./archlive"
 
+rm -rf "$out"
 mkdir -p "$out/build"
 cp -r /usr/share/archiso/configs/releng/* "$out/"
 cp -r "$here"/config/* "$out/"
