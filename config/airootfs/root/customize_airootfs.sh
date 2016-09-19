@@ -35,6 +35,11 @@ function youtube-audio
 {
   youtube-dl -o - --audio-quality 0 "\$1" | mpv --no-video -
 }
+
+function ssh-mpv
+{
+  ssh "$1" "cat $2" | mpv -
+}
 EOF
 
 ### Users
