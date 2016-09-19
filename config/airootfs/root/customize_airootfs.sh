@@ -19,9 +19,16 @@ cat <<EOF > /etc/profile.d/media-tools.sh
 
 function setup-network
 {
-  ip link set enp32s0 up
-  killall dhcpcd
-  dhcpcd
+  ip link set enp32s0 up;
+  killall dhcpcd;
+  dhcpcd;
+}
+
+function setup-audio
+{
+  amixer set "Auto-Mute Mode" "Disabled";
+  amixer set "Master" "100%";
+  alsactl store;
 }
 
 function youtube-audio
@@ -29,11 +36,6 @@ function youtube-audio
   youtube-dl -o - --audio-quality 0 "\$1" | mpv --no-video -
 }
 EOF
-
-### Audio
-amixer set "Auto-Mute Mode" "Disabled"
-amixer set "Master" "100%"
-alsactl store
 
 ### Users
 username=root
