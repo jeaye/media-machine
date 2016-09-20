@@ -31,6 +31,12 @@ function setup-audio
   alsactl store;
 }
 
+function setup-hdmi
+{
+  xrandr --output HDMI-0 --auto
+  xrandr --output LVDS --off
+}
+
 function youtube-audio
 {
   youtube-dl -o - --audio-quality 0 "\$1" | mpv --no-video -
