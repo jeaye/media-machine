@@ -45,7 +45,7 @@ function youtube-audio
 function ssh-mpv
 {
   scp \$1:\$3 .
-  ssh \$1 "cat \$2" | mpv --sub-file \$3 -
+  ssh \$1 "cat \$2" | mpv --sub-file \$(basename \$3) -
 }
 EOF
 
