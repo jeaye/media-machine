@@ -48,6 +48,7 @@ function ssh-mpv
   ssh \$1 "cat \$2" | mpv --sub-file \$(basename \$3) -
 }
 EOF
+chmod +x /etc/profile.d/media-tools.sh
 
 ### Users
 username=root
