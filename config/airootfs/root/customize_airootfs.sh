@@ -12,8 +12,6 @@ echo meter > /etc/hostname
 ### Services
 systemctl enable sshd ; systemctl start sshd
 
-#aticonfig --initial
-
 cat <<EOF > /etc/profile.d/media-tools.sh
 #!/usr/bin/env bash
 
@@ -53,11 +51,9 @@ chmod +x /etc/profile.d/media-tools.sh
 ### Users
 username=root
 userhome=/root
-#useradd -m -g users -G wheel -s /bin/bash $username
 
 ### User files
 for file in i3 i3status.conf tmux.conf xinitrc Xresources config ssh;
 do
     cp -rf /etc/skel/$file $userhome/.$file
 done
-#chown -R $username:users /home/$username
