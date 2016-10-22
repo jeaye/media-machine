@@ -48,8 +48,9 @@ function youtube-audio
 
 function ssh-mpv
 {
-  scp \$1:\$3 .
-  ssh \$1 "cat \$2" | mpv --sub-file \$(basename \$3) -
+  mkdir -p /tmp/ssh-mpv
+  sshfs \$1: /tmp/ssh-mpv
+  mpv --sub-file /tmp/ssh-mpv/\$3 /tmp/ssh-mpv/\$2
 }
 EOF
 chmod +x /etc/profile.d/media-tools.sh
