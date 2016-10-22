@@ -11,6 +11,7 @@ ttf-dejavu
 terminus-font
 mesa-libgl
 openssh
+sshfs
 rxvt-unicode
 dmenu
 i3status
