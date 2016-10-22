@@ -9,4 +9,10 @@ xrdb -merge ~/.Xresources
 # Nice background color
 hsetroot -solid "#002b36"
 
+source /etc/profile.d/media-tools.sh
+
+setup-audio
+setup-network
+setup-hdmi
+
 exec i3
