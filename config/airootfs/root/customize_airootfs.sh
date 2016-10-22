@@ -17,9 +17,15 @@ cat <<EOF > /etc/profile.d/media-tools.sh
 
 function setup-network
 {
-  ip link set enp32s0 up;
-  killall dhcpcd;
-  dhcpcd;
+  if ping -q -c1 jeaye.com > /dev/null 2<&1;
+  then
+    echo "network already setup";
+  else
+    echo "setting up network";
+    ip link set enp32s0 up;
+    killall dhcpcd;
+    dhcpcd;
+  fi
 }
 
 function setup-audio
