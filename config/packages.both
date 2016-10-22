@@ -22,3 +22,6 @@ tmux
 bash-completion
 youtube-viewer
 firefox
+catalyst-hook
+catalyst-utils
+catalyst-libgl
