@@ -51,6 +51,7 @@ function ssh-mpv
   mkdir -p /tmp/ssh-mpv
   sshfs \$1: /tmp/ssh-mpv
   mpv --sub-file /tmp/ssh-mpv/\$3 /tmp/ssh-mpv/\$2
+  umount /tmp/ssh-mpv
 }
 EOF
 chmod +x /etc/profile.d/media-tools.sh
